@@ -1,13 +1,15 @@
+import { MainLayout } from '@/components/layout'
+import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { MainLayout } from '@/components/layout'
-import { NextPageWithLayout } from '@/models'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const HomePage: NextPageWithLayout = () => {
+type Props = {}
+
+export default function AboutPage({}: Props) {
   return (
     <>
       <Head>
@@ -41,7 +43,7 @@ const HomePage: NextPageWithLayout = () => {
           </div>
         </div>
 
-        <h1>Home</h1>
+        <h1>About</h1>
 
         <div className={styles.grid}>
           <a
@@ -105,6 +107,4 @@ const HomePage: NextPageWithLayout = () => {
   )
 }
 
-HomePage.Layout = MainLayout
-
-export default HomePage
+AboutPage.Layout = MainLayout
